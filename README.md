@@ -1,1 +1,1 @@
-# base-gulp
+# Base con Gulp (Jade - SASS - JS)

@@ -1,0 +1,50 @@
+@if $incluir-buttons == true{
+  // ------------------------------------
+  //       ·BUTTONS
+  // -------------------------------------
+
+
+  .btn{
+    border: none;
+    display: inline-block;
+    line-height: 1.4;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: $radius;
+    background-color: $color-base;
+    box-shadow: $shadow;
+    transition: $animation;
+    
+    &:hover{
+      background-color: lighten($color-base, 5%);
+      box-shadow: $shadow-hover;
+    }
+    &:active,
+    &:focus{
+      outline: none;
+    }
+    
+
+    margin: .2em;
+
+  }
+
+
+  .btn-s{
+    width: 10rem;
+  }
+  .btn-m{
+
+  }
+  .btn-l{
+
+  }
+
+
+
+}

@@ -1,0 +1,33 @@
+@import 'util/variables';
+@import 'util/mixins';
+
+@import 'base/normalize';
+@import 'base/helpers';
+@import 'base/typography';
+@import 'base/grill';
+
+@import 'components/icons';
+@import 'components/nav';
+@import 'components/buttons';
+
+// body{
+//   background-color: red;
+//   &:after{content:'xs'}
+//   @include respond-to(s){background-color: cornflowerblue;&:after{content:'s'}}
+//   @include respond-to(m){background-color: greenyellow;&:after{content:'m'}}
+//   @include respond-to(l){background-color: lightpink;&:after{content:'l'}}
+// }
+
+
+
+
+// .nav{
+//   width: 100vw;
+//   height: 10vw;
+//   background: url('#{$image-dir}/menu.svg') no-repeat center center;
+//   background-size: cover;
+// }
+
+.contenido{
+  height: 100rem;
+}

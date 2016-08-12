@@ -1,0 +1,170 @@
+// -------------------------------------
+//      ·SETTINGS
+// -------------------------------------
+
+$incluir-grid						: true;
+$incluir-hidden-visible : false;
+$incluir-icons          : true;
+$incluir-nav            : true;
+$incluir-buttons        : true;
+
+// -------------------------------------
+//      ·BREAKPOINTS Grill
+// -------------------------------------
+
+//  .text 
+//    color: pink
+//    @include respond-to(medium) 
+//      color: maroon
+
+$breakpoints: ( 
+  xs: 300px, 
+  s: 520px, 
+  m: 768px, 
+  l: 1200px
+);
+
+// grill columns
+$cols: 20 25 33 50 100;
+
+// -------------------------------------
+//      ·DIR 
+// ------------------------------------- 
+
+// Use: background-image:url("#{$image-dir}/btn.jpg")
+$image-dir: "../images";
+$font-dir : "../fonts";
+
+// -------------------------------------
+//      ·LAYOUT
+// ------------------------------------- 
+
+$baselineheight : 1.4;
+$text-margin-btm: 0.5rem;
+$pagemaxwidth 	: 1024px;
+$radius 				: 2px;
+$hovertransition: .3s;
+$animationtime 	: .3s;
+$animation			: all ease-out $animationtime;
+$paddingpage 		: 1rem;
+$shadow 				: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+$shadow-hover   : 0 5px 11px 0 rgba(0,0,0,0.3),0 4px 15px 0 rgba(0,0,0,0.3);
+
+// Definimos elementos constantes del layout
+$baselineheight : 1.5em;
+
+// z-index
+$index-0 : -1;
+$index-1 : 2;
+$index-2 : 10;
+$index-3 : 999999;
+$index-4 : 99999999;
+
+// -------------------------------------
+//      ·FONT-FACE
+// -------------------------------------
+
+$basefont	: 'Roboto','PT Sans Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$altfont 	: 'Roboto', 'Helvetica Neue',Georgia, Times, "Times New Roman";
+$baseheadingfontweight: normal;
+
+// -------------------------------------
+//      ·TAMAÑOS
+// -------------------------------------
+
+$basefontsize : 16px;
+
+$tittle-size : 
+  (h1, 1.5)
+  (h2, 1.25)
+  (h3, 1.1875)
+  (h4, 1.125)
+  (h5, 1.0625)
+  (h6, 1);
+
+$tittle-size-l : 
+  (h1, 3)
+  (h2, 2.5)
+  (h3, 1.9375)
+  (h4, 1.5625)
+  (h5, 1.25)
+  (h6, 1);
+
+// ------------------------------------
+//      ·COLORS
+// -------------------------------------
+
+$color-base      	: #D71E00; //rojo
+$color-base-light	: lighten($color-base, 30%);
+$color-secondary  : #058789; // azul
+$color-tertiary   : #FFC857; // amarillo
+
+// Web
+$background				: white;
+$bordercolor			:	#494949;
+$selection-bgc		: $color-base-light;
+$selection-color	: initial;
+
+$opacity-1  : rgba(0,0,0,0.8);
+$opacity-2  : rgba(0,0,0,0.6);
+$opacity-3  : rgba(0,0,0,0.4);
+$opacity-4  : rgba(0,0,0,0.2);
+
+// -------------------------------------
+//      ·TEXTURAS
+//  -------------------------------------
+
+// Definimos Colores y elementos de popups, mensajes de alerta, etc...
+$color-alert  	: rgb(252,228,207);
+$color-error  	: rgb(218,79,73);
+$color-info   	: rgb(66, 184, 221);
+$color-success  : rgb(91,183,91);
+
+
+//sociales
+$fb					: rgb(59, 89, 182);
+$tw 				: rgb(64,153,255);
+$googleplus : rgb(221, 75, 57);
+$pinterest 	: rgb(203, 32, 39);
+$skype 			: rgb(18,165,244);
+$spotify		: rgb(129,183,26);
+$instagram	: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+$youtube		: #cd201f;
+$linkedin		: #4875B4;
+$mail				: #F99600;
+$whatsapp   : #43d854;
+
+// -------------------------------------
+//      ·TYPOGRAPHY
+//  -------------------------------------
+
+$textcolor				: #494949;
+$textcolor-strong	: black;
+$linkcolor        : $color-base;
+
+
+// -------------------------------------
+//      ·NAV
+//  -------------------------------------
+
+$navBackground        : $color-base;
+$navShadow            : $shadow;
+$navColor             : $textcolor;
+$navSize              : 1rem;
+$navSizedesk          : 1.2rem;
+$navFamily            : 'Roboto';
+$nav__IcoColor        : white;
+$nav__IcoShadow       : 1px 1px 2px rgba(0,0,0,.3);
+$nav__IcoSize         : 1rem;
+$nav__IcoSizeDesk     : 2rem;
+$nav__IcoMargin       : 1rem;
+$nav__LogoWidth       : 7rem;
+$nav__LogoWidthdesk   : 10rem;
+$nav__Barraheight     : 3rem;
+$nav__Barraheightdesk : 5rem;
+$nav__Barratop        : 2rem;
+$nav__BarraSeparation : 0.5rem;
+$nav__FullBackground  : rgba($color-base, .5);
+$nav__FullSeparacion  : 1rem;
+$nav__FullSeparaciondesk : 2rem;
+$nav__LateralWidth    : 15rem;

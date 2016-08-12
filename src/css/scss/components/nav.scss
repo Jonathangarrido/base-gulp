@@ -1,0 +1,307 @@
+@if $incluir-nav == true{
+  /* ------------------------------------
+        ·NAV
+    -------------------------------------*/
+  $incluir-nav-barra    : false;
+  $incluir-nav-full    : true;
+  $incluir-nav-lateral : false;
+
+  .nav{
+    a{
+      font-size: $navSize;
+      font-family: $navFamily;
+    }
+  }
+  .nav__icon{
+    color: $nav__IcoColor;
+    cursor: pointer;
+    position: fixed;
+    text-shadow: $nav__IcoShadow;
+    top: $nav__IcoMargin;
+    z-index: $index-2;
+  }
+
+  @if $incluir-nav-barra == true{
+    // JADE
+    // .nav.nav__barra
+    //   div
+    //     .nav__barra--espacio
+    //       span(onclick="navBarra()").nav__icon.icon-navicon
+    //     .nav__barra--logo
+    //       img(src="images/logo.svg", alt="")
+    //     nav.nav__barra--menu
+    //       a(href="#", onclick="navBarra()") menu1
+
+    // JS requiere Jquery
+    // function navBarra(){
+    //   $( '.nav__barra--menu' ).toggleClass( 'slideInTop');
+    //   $( '.nav__icon' ).toggleClass( 'icon-close icon-navicon');
+    // }
+    .nav__barra{
+      background-color: $navBackground;
+      box-shadow: $navShadow;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      .nav__icon{
+        right: $nav__IcoMargin;
+        @include respond-to(l){
+          display: none;
+        }
+      }
+      &>div{
+        align-items: center;
+        background-color: $navBackground;
+        display: flex;
+        height: $nav__Barraheight;
+        justify-content: center;
+        position: relative;
+        @include max-width();
+        @include respond-to(l){
+          height: $nav__Barraheightdesk;
+          padding: 0;
+          justify-content: space-between;
+        } 
+      }
+      &--espacio{
+        background-color: $navBackground;
+        height: 100%;
+        left:  0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: $index-2;
+        @include respond-to(l){
+          display: none;
+        }
+      }
+      &--logo{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: $nav__LogoWidth;
+        z-index: $index-4;
+        @include respond-to(l){
+          width: $nav__LogoWidthdesk;
+        }
+        img{
+          width: 100%;
+        }
+      }
+      &--menu{
+        background-color: $navBackground;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        position: fixed;
+        text-align: center;
+        top: -100%;
+        transition: $animation;
+        width: 100vw;
+        z-index: $index-1;
+        @include respond-to(l){
+          flex-direction: row;
+          position: relative;
+          top: initial;
+          margin-top: $nav__Barratop;
+          width: auto;
+        }
+        a{
+          color: $navColor;
+          padding: .25em 0;
+          @include respond-to(l){
+            padding: 0;
+            &:not(:last-child){
+              margin-right: $nav__BarraSeparation;
+            }
+          }
+        }
+      }
+      .slideInTop{
+        top: $nav__Barraheight;
+      }
+      &--fixed{
+        position: fixed;
+      }
+    }
+  }
+  @if $incluir-nav-full == true{
+    // JADE
+    // .nav.nav__full
+    //   span(onclick="navFull()").nav__icon.icon-navicon
+    //   nav(onclick="navFull()").nav__full--barra.wrapper
+    //     ul
+    //       li
+    //         a(href="#", onclick="navFull()") menu 1
+    // JS requiere Jquery
+    // function navFull(){
+    //   $('html').toggleClass( 'overflow'); 
+    //   $( '.nav__full--barra' ).toggleClass( 'fadeInright');
+    //   $( '.nav__icon' ).toggleClass( 'icon-close icon-navicon');
+    // }
+    .nav__full{
+      .nav__icon{
+        right: $nav__IcoMargin;
+      }
+      &--barra{
+        background-color: $nav__FullBackground;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: $animation;
+        visibility: collapse;
+        li{
+          &:not(last-child){
+            margin-bottom: $nav__FullSeparacion;
+          }
+        }
+        a{
+          color: $navColor;
+          padding: .5rem;
+        }
+      }
+      .fadeInright{
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+      }
+    }
+  }
+  @if $incluir-nav-lateral == true{
+
+    //  JADE
+    // .nav.nav__lateral.full
+    //   span(onclick="navLateral()").nav__icon.icon-navicon
+    //   .nav__lateral--fondo.full(onclick="navLateral()")
+    //   nav.nav__lateral--menu.wrapper
+    //     ul
+    //       li
+    //         a(href="#", onclick="navLateral()") menu 1
+    // .nav__lateral__contenido
+
+    //  JS requiere Jquery
+    // function navLateral(){
+    //   $('html').toggleClass( 'overflow');
+    //   $( '.nav__lateral--menu' ).toggleClass( 'slideInLeft');
+    //   $( '.nav__lateral--fondo' ).fadeToggle( 'fast');
+    //   $( '.nav__icon' ).toggleClass( 'icon-close icon-navicon')
+    // }
+
+    .nav__lateral{
+      position: fixed;
+    
+      .nav__icon{
+        left: $nav__IcoMargin;
+      }
+
+      &--fondo{
+        background-color: $opacity-2;
+        display: none;
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+
+      &--menu{
+        background-color: $navBackground;
+        box-shadow: $navShadow;;
+        height: 100vh;
+        left: -$nav__LateralWidth;
+        position: relative;
+        top: 0;
+        transition: $animation;
+        width: $nav__LateralWidth;
+        a{
+          color: $navColor;
+        }
+      }
+
+      &__contenido{
+        padding: 1rem;
+        transition: margin-left .3s ease-out;
+      }
+
+      .slideInLeft {
+        left: 0;
+      }
+
+    }
+
+  }
+    
+  @include respond-to(l){
+    .nav{
+      a{
+        font-size: $navSizedesk;
+      }
+    }
+    .nav__icon{
+      font-size: $nav__IcoSizeDesk;
+    }
+
+    @if $incluir-nav-barra == true{
+      .nav__barra{
+        .nav__icon{
+          display: none;
+        }
+        &>div{
+          height: $nav__Barraheightdesk;
+          padding: 0;
+          justify-content: space-between;
+        }
+        &--espacio{
+          display: none;
+        }
+        &--logo{
+          width: $nav__LogoWidthdesk;
+        }
+        &--menu{
+          flex-direction: row;
+          position: relative;
+          top: initial;
+          margin-top: $nav__Barratop;
+          width: auto;
+          a{
+            padding: 0;
+            &:not(:last-child){
+              margin-right: $nav__BarraSeparation;
+            }
+          }
+        }
+      }
+    }
+
+    @if $incluir-nav-full == true{
+      .nav__full{
+        &--barra{
+          li{
+            &:not(last-child){
+              margin-bottom: $nav__FullSeparaciondesk;
+            }
+          }
+        }
+      }
+    }
+
+    @if $incluir-nav-lateral == true{
+      .nav__lateral{
+        .nav__icon{
+          display: none;
+        }
+        &--menu{
+          left: 0;
+        }
+        &__contenido{
+          margin-left: 15rem;
+          width: calc(100vw - 15rem);
+        }
+      }
+    }
+
+    
+  }
+}
