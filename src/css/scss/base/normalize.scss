@@ -89,7 +89,6 @@ template,
 
 a {
   background-color: transparent; 
-  cursor: pointer;
   -webkit-text-decoration-skip: objects; 
 }
 
@@ -147,9 +146,9 @@ dfn {
 // `article` contexts in Chrome, Firefox, and Safari.
 
 
-h1,h2,h3,h4,h5,h6,p{
-  margin: 0;
-  padding: 0;
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
 // Add the correct background and color in IE 9-.
@@ -352,7 +351,7 @@ legend {
 textarea {
   overflow: auto;
 }
-
+ 
 
 // 1. Add the correct box sizing in IE 10-.
 // 2. Remove the padding in IE 10-.
@@ -410,10 +409,3 @@ textarea {
   -webkit-appearance: button; 
   font: inherit; 
 }
-
-*{
-  &,&::before,&::after{
-    box-sizing: border-box;
-  }
-}
-  

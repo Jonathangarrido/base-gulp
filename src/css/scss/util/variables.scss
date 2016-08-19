@@ -1,43 +1,65 @@
-// -------------------------------------
-//      ·SETTINGS
-// -------------------------------------
+/* ·SETTINGS
+  ========================================================================== */
 
-$incluir-grid						: true;
-$incluir-hidden-visible : false;
-$incluir-icons          : true;
-$incluir-nav            : true;
-$incluir-buttons        : true;
+$incluir__grid						     : true;
+$incluir__grid--v-h            : true;
+$incluir__icons                : true;
+$incluir__nav                  : true;
+$incluir__nav--barra           : true;
+$incluir__nav--full            : true;
+$incluir__nav--lateral         : true;
+$incluir__buttons              : true;
+$incluir__buttons--bordes      : true;
+$incluir__form                 : true;
+$incluir__form--radio-checkbox : true;
+$incluir__form--file           : true;
+$incluir__video                : true;
+$incluir__table                : true;
+$incluir__card                 : true;
+$incluir__modal                : true;
+$incluir__tabs                : true;
 
-// -------------------------------------
-//      ·BREAKPOINTS Grill
-// -------------------------------------
+/**
+ * Table of Contents:
+ *
+ *  1. Breakpoint - Grill
+ *  2. Directorios
+ *  3. Layout
+ *  4. Fonts
+ *  5. Tamaños
+ *  6. Colors
+ *  7. Typografy
+ *  8. Nav
+ *  9. Forms
+ *  10. Botons
+ *  11. Video
+ *  12. Table
+ *  13. Cards
+ *  14. Modal
+ */
 
-//  .text 
-//    color: pink
-//    @include respond-to(medium) 
-//      color: maroon
+
+/* 1. Breakpoint - Grill
+   ========================================================================== */
 
 $breakpoints: ( 
-  xs: 300px, 
-  s: 520px, 
-  m: 768px, 
-  l: 1200px
+  s: 300px, 
+  m: 520px, 
+  l: 768px, 
+  xl: 1200px
 );
-
-// grill columns
 $cols: 20 25 33 50 100;
 
-// -------------------------------------
-//      ·DIR 
-// ------------------------------------- 
 
-// Use: background-image:url("#{$image-dir}/btn.jpg")
+/* 2. Directorios
+   ========================================================================== */
+
 $image-dir: "../images";
 $font-dir : "../fonts";
 
-// -------------------------------------
-//      ·LAYOUT
-// ------------------------------------- 
+
+/* 3. Layout
+   ========================================================================== */
 
 $baselineheight : 1.4;
 $text-margin-btm: 0.5rem;
@@ -48,32 +70,27 @@ $animationtime 	: .3s;
 $animation			: all ease-out $animationtime;
 $paddingpage 		: 1rem;
 $shadow 				: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-$shadow-hover   : 0 5px 11px 0 rgba(0,0,0,0.3),0 4px 15px 0 rgba(0,0,0,0.3);
+$shadow-hover   : 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
 
-// Definimos elementos constantes del layout
-$baselineheight : 1.5em;
-
-// z-index
 $index-0 : -1;
 $index-1 : 2;
 $index-2 : 10;
 $index-3 : 999999;
 $index-4 : 99999999;
 
-// -------------------------------------
-//      ·FONT-FACE
-// -------------------------------------
+
+/* 4. Fonts
+   ========================================================================== */
 
 $basefont	: 'Roboto','PT Sans Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $altfont 	: 'Roboto', 'Helvetica Neue',Georgia, Times, "Times New Roman";
 $baseheadingfontweight: normal;
 
-// -------------------------------------
-//      ·TAMAÑOS
-// -------------------------------------
+
+/* 5. Tamaños
+   ========================================================================== */
 
 $basefontsize : 16px;
-
 $tittle-size : 
   (h1, 1.5)
   (h2, 1.25)
@@ -81,7 +98,6 @@ $tittle-size :
   (h4, 1.125)
   (h5, 1.0625)
   (h6, 1);
-
 $tittle-size-l : 
   (h1, 3)
   (h2, 2.5)
@@ -90,14 +106,14 @@ $tittle-size-l :
   (h5, 1.25)
   (h6, 1);
 
-// ------------------------------------
-//      ·COLORS
-// -------------------------------------
 
-$color-base      	: #D71E00; //rojo
+/* 6. Colors
+   ========================================================================== */
+
+$color-base      	: rgb(59, 89, 182);
 $color-base-light	: lighten($color-base, 30%);
-$color-secondary  : #058789; // azul
-$color-tertiary   : #FFC857; // amarillo
+$color-secondary  : #058789; 
+$color-tertiary   : #FFC857; 
 
 // Web
 $background				: white;
@@ -105,21 +121,17 @@ $bordercolor			:	#494949;
 $selection-bgc		: $color-base-light;
 $selection-color	: initial;
 
+// opacidad
 $opacity-1  : rgba(0,0,0,0.8);
 $opacity-2  : rgba(0,0,0,0.6);
 $opacity-3  : rgba(0,0,0,0.4);
 $opacity-4  : rgba(0,0,0,0.2);
 
-// -------------------------------------
-//      ·TEXTURAS
-//  -------------------------------------
-
-// Definimos Colores y elementos de popups, mensajes de alerta, etc...
-$color-alert  	: rgb(252,228,207);
+//estados
 $color-error  	: rgb(218,79,73);
 $color-info   	: rgb(66, 184, 221);
 $color-success  : rgb(91,183,91);
-
+$color-warning  : #ec971f;
 
 //sociales
 $fb					: rgb(59, 89, 182);
@@ -134,37 +146,99 @@ $linkedin		: #4875B4;
 $mail				: #F99600;
 $whatsapp   : #43d854;
 
-// -------------------------------------
-//      ·TYPOGRAPHY
-//  -------------------------------------
+
+/* 7. Typografy
+   ========================================================================== */
 
 $textcolor				: #494949;
 $textcolor-strong	: black;
 $linkcolor        : $color-base;
 
 
-// -------------------------------------
-//      ·NAV
-//  -------------------------------------
+/* 8. Nav
+   ========================================================================== */
 
-$navBackground        : $color-base;
-$navShadow            : $shadow;
-$navColor             : $textcolor;
-$navSize              : 1rem;
-$navSizedesk          : 1.2rem;
-$navFamily            : 'Roboto';
-$nav__IcoColor        : white;
-$nav__IcoShadow       : 1px 1px 2px rgba(0,0,0,.3);
-$nav__IcoSize         : 1rem;
-$nav__IcoSizeDesk     : 2rem;
-$nav__IcoMargin       : 1rem;
-$nav__LogoWidth       : 7rem;
-$nav__LogoWidthdesk   : 10rem;
-$nav__Barraheight     : 3rem;
-$nav__Barraheightdesk : 5rem;
-$nav__Barratop        : 2rem;
-$nav__BarraSeparation : 0.5rem;
-$nav__FullBackground  : rgba($color-base, .5);
-$nav__FullSeparacion  : 1rem;
-$nav__FullSeparaciondesk : 2rem;
-$nav__LateralWidth    : 15rem;
+$nav--bg                    : $color-base;
+$nav--shadow                : $shadow;
+$nav--color                 : $textcolor;
+$nav--size                  : 1rem;
+$nav--size-desk             : 1.2rem;
+$nav--family                : 'Roboto';
+$nav__ico--color            : white;
+$nav__ico--shadow           : 1px 1px 2px rgba(0,0,0,0.3);
+$nav__ico--size             : 1rem;
+$nav__ico--size-desk        : 2rem;
+$nav__ico--margin           : 1rem;
+$nav__logo--width           : 7rem; 
+$nav__logo--width-desk      : 10rem;
+$nav__barra--height         : 3rem;
+$nav__barra--height-desk    : 5rem;
+$nav__barra--top            : 2rem;
+$nav__barra--separation     : 0.5rem;
+$nav__full--bg              : rgba($color-base, 0.5);
+$nav__full--separacion      : 1rem;
+$nav__full--separacion-desk : 2rem;
+$nav__lateral--width        : 15rem;
+
+
+/* 9. Forms
+   ========================================================================== */
+
+$form--padding      : 1rem 0;
+$form--bg           : #f4f4f4;
+$form--div          : 1rem; 
+$form--colorBase    : #9e9e9e;   
+$form--colorSelect  : #26a69a; 
+$form--size         : 1rem;
+$form__label--size  : 0.8rem;
+$form__label--color : $textcolor;
+$form__input--bg    : transparent;
+
+
+/* 10. Botons
+   ========================================================================== */
+$buttons--state: ( 
+  success: $color-success,
+  info: $color-info,
+  warning: $color-warning,
+  error: $color-error,
+);
+$buttons--size : 
+  (xs, 0.7rem)
+  (s, 0.85rem)
+  (l, 1.2rem, 0.4em 0.9em);
+$buttons--color: white;
+
+
+/* 11. Video
+   ========================================================================== */
+
+$video--max-width: 720px;
+
+
+/* 12. Table
+   ========================================================================== */
+
+$table--padding       : 0 10px; 
+$table--padding-desk  : 15px 5px; 
+$table--borde         : 1px solid #d0d0d0;
+$table__striped       : #f2f2f2;
+
+
+/* 13. Cards
+   ========================================================================== */
+
+$card__footer--border  : $table--borde;
+$card__footer--justify : space-around;
+$card--padding         : 1rem;
+$card--bg              : white;
+$card--title--size     : 1.5rem;
+
+
+/* 14. Modal
+   ========================================================================== */
+
+$modal--bg              : $opacity-1;
+$modal__conte--bg       : #f4f4f4;
+$modal__conte--padding  : 2rem 3rem;
+$modal__conte--width    : 40rem; 

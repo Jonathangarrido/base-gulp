@@ -58,7 +58,9 @@
 }
 
 
-
+@mixin aclarar($color:#f0f){
+  background-color: lighten($color, 5%);
+}
 
 // -------------------------------------
 //       ·SECTION SEPARATORS

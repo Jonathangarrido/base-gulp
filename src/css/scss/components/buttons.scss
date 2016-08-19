@@ -1,50 +1,104 @@
-@if $incluir-buttons == true{
-  // ------------------------------------
-  //       ·BUTTONS
-  // -------------------------------------
+@mixin btn-hover($color:#f0f){
+  &:hover{
+    @include aclarar($color);
+  }
+}
 
+@if $incluir__buttons == true{
+  /* ------------------------------------
+        ·BOTONES
+  -------------------------------------*/
 
-  .btn{
-    border: none;
+  %btn{
     display: inline-block;
     line-height: 1.4;
-    color: white;
     text-align: center;
     vertical-align: middle;
     font-size: 1rem;
     white-space: nowrap;
     cursor: pointer;
-    padding: .5em 1em;
-    border-radius: $radius;
-    background-color: $color-base;
-    box-shadow: $shadow;
+    padding: .35em .7em;
+    border-radius: $radius;    
     transition: $animation;
-    
-    &:hover{
-      background-color: lighten($color-base, 5%);
-      box-shadow: $shadow-hover;
-    }
     &:active,
     &:focus{
       outline: none;
     }
-    
-
+    &[disabled]{
+      cursor: not-allowed;
+      opacity: 0.4!important;
+      box-shadow: none 0.4!important;
+    }
     margin: .2em;
-
   }
 
-
-  .btn-s{
-    width: 10rem;
+  // BOTONES DEFAULT -------------------------------------
+  .btn{
+    @extend %btn;
+    border: none;
+    color: $buttons--color;
+    background-color: $color-base;
+    box-shadow: $shadow;
+    &:hover{
+      @include aclarar($color-base);
+      box-shadow: $shadow-hover;
+    }
   }
-  .btn-m{
 
+  // BOTONES ESTADOS -------------------------------------
+  
+  @each $nombre, $color in $buttons--state{
+  
+    .btn--#{$nombre}{
+      background-color: $color;
+      @include btn-hover($color);
+    }
   }
-  .btn-l{
 
+  // BOTONES ESTILOS -------------------------------------
+  @if $incluir__buttons--bordes == true{
+    .btn__bordes{
+      @extend %btn;
+      color: $color-base;
+      background-color: transparent;
+      box-shadow: none;
+      border: solid 1px $color-base;
+      &:hover{
+        background-color: $color-base;
+        border-color: trasparent;
+        color: white;
+      }
+    }
+
+    @each $nombre, $color in $buttons--state{
+    
+      .btn__bordes--#{$nombre}{
+        color: $color;
+        border: solid 1px $color;
+        &:hover{
+          background-color: $color;
+        }
+      }
+    }
+  }
+  
+  // BOTONES TAMAÑOS -------------------------------------
+
+  @each $nombre, $size, $padding in $buttons--size{
+    
+    .btn--#{$nombre} {
+      font-size: $size;
+      @if $padding != 0{
+        padding: $padding;
+      }
+    }
   }
 
-
+  // BOTONES FORMAS -------------------------------------
+  .btn--circle{
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+  } 
 
 }

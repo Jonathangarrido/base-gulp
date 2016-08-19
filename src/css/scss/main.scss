@@ -2,6 +2,7 @@
 @import 'util/mixins';
 
 @import 'base/normalize';
+@import 'base/mi-reset';
 @import 'base/helpers';
 @import 'base/typography';
 @import 'base/grill';
@@ -9,6 +10,12 @@
 @import 'components/icons';
 @import 'components/nav';
 @import 'components/buttons';
+@import 'components/form';
+@import 'components/video';
+@import 'components/table';
+@import 'components/cards';
+@import 'components/modal';
+@import 'components/tabs';
 
 // body{
 //   background-color: red;
@@ -18,6 +25,9 @@
 //   @include respond-to(l){background-color: lightpink;&:after{content:'l'}}
 // }
 
+body{
+  padding: 1rem;
+}
 
 
 
@@ -28,6 +38,5 @@
 //   background-size: cover;
 // }
 
-.contenido{
-  height: 100rem;
-}
+
+
