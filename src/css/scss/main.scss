@@ -16,27 +16,6 @@
 @import 'components/cards';
 @import 'components/modal';
 @import 'components/tabs';
+@import 'components/sliders';
 
-// body{
-//   background-color: red;
-//   &:after{content:'xs'}
-//   @include respond-to(s){background-color: cornflowerblue;&:after{content:'s'}}
-//   @include respond-to(m){background-color: greenyellow;&:after{content:'m'}}
-//   @include respond-to(l){background-color: lightpink;&:after{content:'l'}}
-// }
-
-body{
-  padding: 1rem;
-}
-
-
-
-// .nav{
-//   width: 100vw;
-//   height: 10vw;
-//   background: url('#{$image-dir}/menu.svg') no-repeat center center;
-//   background-size: cover;
-// }
-
-
-
+@import 'pages/base'

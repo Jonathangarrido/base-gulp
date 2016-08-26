@@ -28,6 +28,9 @@
       cursor: not-allowed;
       opacity: 0.4!important;
       box-shadow: none 0.4!important;
+      &:hover{
+        box-shadow: $shadow!important;
+      }
     }
     margin: .2em;
   }
@@ -67,6 +70,12 @@
         background-color: $color-base;
         border-color: trasparent;
         color: white;
+      }
+      &[disabled]{
+        &:hover{
+          color: $color-base;
+          background-color: transparent;
+        }
       }
     }
 

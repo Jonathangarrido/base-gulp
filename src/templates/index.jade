@@ -1,55 +1,33 @@
-doctype html
-html(lang="es-ES")
-  head
-    title Base Gulp
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="description", content="")
-    meta(name="apple-mobile-web-app-capable", content="yes")
-    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
-    //- meta(name="theme-color", content="#D71E00")
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700', type='text/css')
-    link(rel='stylesheet', href='./css/main.css')
-    //- link(rel='stylesheet', href='./css/main.min.css')
-  body
-    <!--[if lt IE 9]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+extends ./common/base.jade
 
-    .row
-      .c100-s
-        ul.tabs
-          li.tab
-            a(href="#tab1") tab 1
-          li.tab
-            a(href="#tab2") tab 2
-          li.tab
-            a(href="#tab3") tab 3
-      .c100-s.tab__conte
-        #tab1 tab1
-        #tab2 
-          | tab2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam harum architecto quas doloremque, qui hic dolores? Voluptates nam, expedita maxime soluta mollitia, sunt. Quisquam ut voluptates nobis earum commodi, neque.
-          br
-          | tab2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam harum architecto quas doloremque, qui hic dolores? Voluptates nam, expedita maxime soluta mollitia, sunt. Quisquam ut voluptates nobis earum commodi, neque.
-          br
-          | tab2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam harum architecto quas doloremque, qui hic dolores? Voluptates nam, expedita maxime soluta mollitia, sunt. Quisquam ut voluptates nobis earum commodi, neque.
-        #tab3
-          pre
+block vars
+  - var name = 'base'
+  - var title = 'Mi estilo - '+ name
+
+block content
+  .subtitulo.h4 Tipografia
+  .muestra
+    div
+      h1 h1
+      h2 h2
+      h3 h3
+      h4 h4
+      h5 h5
+      h6 h6
+    div
+  .row.conte-tabs 
+    .c100-s
+      ul.tabs
+        li.tab
+          a(href="#tab1") tab 1
+        li.tab
+          a(href="#tab2") tab 2
+    .c100-s.tab__conte
+      #tab1 
+        pre.tab__codigo
+          code(data-language="html")
             | .row
-            | &nbsp;&nbsp;.c100-s
-            | &nbsp;&nbsp;&nbsp;&nbsp;ul.tabs
-            | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;li.tab
-            | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a(href="#tab1") tab 1
-            | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;li.tab
-            | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a(href="#tab2") tab 2
-            | &nbsp;&nbsp;.c100-s.tab__conte
-            | &nbsp;&nbsp;&nbsp;&nbsp;#tab1 tab1
-            | &nbsp;&nbsp;&nbsp;&nbsp;#tab2 tab2
-        
-  
-    
-        
-
-    script(src="./js/lib/jquery/dist/jquery.min.js")
-    script(src="./js/main.min.js")
-    
+      #tab2 
+        pre.tab__codigo
+          code(data-language="javascript")
+            | function tab(){

@@ -3,7 +3,8 @@
 
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
-    jade = require('gulp-jade-php'),
+    jadephp = require('gulp-jade-php'),
+    jade = require('gulp-jade'),
     sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -25,9 +26,8 @@ var gulp = require('gulp'),
   // Compila los template a html o php
     gulp.task('templates', function() {
       gulp.src('./src/templates/*.jade')
-        .pipe(jade({
+        .pipe(jade({ // jade:html | jadephp: php
           pretty: true, // true: no compress | false: compress
-          extension: '.html' // '.html' o '.php' 
         }))
         .pipe(gulp.dest('./src'))
         .pipe(connect.reload());

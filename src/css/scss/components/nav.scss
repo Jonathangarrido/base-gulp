@@ -6,6 +6,12 @@
     a{
       font-size: $nav--size;
       font-family: $nav--family;
+      font-weight: $nav--weight;
+      text-transform: capitalize;
+      color: $nav--color; 
+    }
+    .active{
+      color: $nav--color--active ;
     }
   }
   .nav__icon{
@@ -35,6 +41,7 @@
     //   $( '.nav__icon' ).toggleClass( 'icon-close icon-navicon');
     // }
     .nav__barra{
+      @extend .nav;
       background-color: $nav--bg;
       box-shadow: $nav--shadow;
       position: absolute;
@@ -83,7 +90,6 @@
         width: 100vw;
         z-index: $index-1;
         a{
-          color: $nav--color;
           padding: .25em 0;
         }
       }
@@ -110,6 +116,7 @@
     //   $( '.nav__icon' ).toggleClass( 'icon-close icon-navicon');
     // }
     .nav__full{
+      @extend .nav;
       .nav__icon{
         right: $nav__ico--margin;
       }
@@ -130,7 +137,6 @@
           }
         }
         a{
-          color: $nav--color;
           padding: .5rem;
         }
       }
@@ -162,7 +168,10 @@
     // }
 
     .nav__lateral{
+      @extend .nav;
       position: fixed;
+      z-index: $index-3;
+      
     
       .nav__icon{
         left: $nav__ico--margin;
@@ -172,7 +181,7 @@
         background-color: $opacity-2;
         display: none;
         left: 0;
-        position: absolute;
+        position: fixed;
         top: 0;
       }
 
@@ -181,7 +190,7 @@
         box-shadow: $nav--shadow;
         height: 100vh;
         left: -$nav__lateral--width;
-        position: relative;
+        position: absolute;
         top: 0;
         transition: $animation;
         width: $nav__lateral--width;
@@ -191,7 +200,7 @@
       }
 
       &__contenido{
-        padding: 1rem;
+        padding: $nav__lateral--contenido-padding;
         transition: margin-left .3s ease-out;
       }
 
