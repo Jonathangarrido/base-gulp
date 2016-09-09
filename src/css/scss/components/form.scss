@@ -306,4 +306,29 @@
     }
   }
   
+  .form--success{
+    background-color: $color-success!important;
+    border-radius: 50%!important;
+    font-family: 'icomoon' !important;
+    height: 3rem;
+    width: 3rem;
+    @extend .icon-check;
+  }
+ 
+  .form--error{ 
+    background-color: $color-error!important;
+    border-radius: 50%!important;
+    font-family: 'icomoon' !important;
+    height: 3rem;
+    position: relative;
+    width: 3rem;
+    @extend .icon-close;
+    &:after{
+      color: $color-error;
+      content: 'Error al enviar, intentelo nuevamente.';
+      right: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
 }

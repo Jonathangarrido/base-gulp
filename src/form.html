@@ -59,16 +59,15 @@
             </div>
             <div class="c100-s tab__conte">
               <div id="tabform1">
-                <pre class="tab__codigo"><code data-language="html"> 
-form(action="").form</code></pre>
+                <pre class="tab__codigo">form(action="").form</pre>
               </div>
               <div id="tabform2">
-                <pre class="tab__codigo"><code data-language="html"> 
-&lt;form action="" class="form">
-&lt;/form></code></pre>
+                <pre class="tab__codigo">&lt;form action="" class="form">
+&lt;/form></pre>
               </div>
               <div id="tabform3">
-                <pre class="tab__codigo"><code data-language="javascript">function form(){
+                <pre class="tab__codigo"> 
+function form(){
   // INPUT
   var elementos = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea, select';
   $(document).on('focus',elementos, function () {
@@ -98,7 +97,7 @@ form(action="").form</code></pre>
       path_input.removeClass('input--success');
     }
   });
-}</code></pre>
+}</pre>
               </div>
             </div>
           </div>
@@ -124,24 +123,22 @@ form(action="").form</code></pre>
               </div>
               <div class="c100-s tab__conte">
                 <div id="input1">
-                  <pre class="tab__codigo"><code data-language="html"> 
-.c100-s
+                  <pre class="tab__codigo">.c100-s
   input(type="text", autocomplete="off")#nombre
   label(for="nombre").form__label Nombre
 .c100-s
   textarea#comentario(name="")
-  label(for="comentario").form__label Nombre</code></pre>
+  label(for="comentario").form__label Nombre</pre>
                 </div>
                 <div id="input2">
-                  <pre class="tab__codigo"><code data-language="html"> 
-&lt;div class="c100-s">
+                  <pre class="tab__codigo">&lt;div class="c100-s">
   &lt;input type="text" autocomplete="off" id="nombre">
   &lt;label for="nombre" class="form__label">Nombre&lt;/label>
 &lt;/div>
 &lt;div class="c100-s">
   &lt;textarea id="comentario" name="">&lt;/textarea>
   &lt;label for="comentario" class="form__label">Nombre&lt;/label>
-&lt;/div></code></pre>
+&lt;/div></pre>
                 </div>
               </div>
             </div>
@@ -168,18 +165,16 @@ form(action="").form</code></pre>
               </div>
               <div class="c100-s tab__conte">
                 <div id="select1">
-                  <pre class="tab__codigo"><code data-language="html"> 
-.c100-s.form__select
+                  <pre class="tab__codigo">.c100-s.form__select
   label(for="seleccion").form__label Elija figura
   select(name="figuras")#seleccion
     option 
     option(value="circulo") circulo
     option(value="cuadrado") cuadrado
-    option(value="triangulo") triangulo</code></pre>
+    option(value="triangulo") triangulo</pre>
                 </div>
                 <div id="select2">
-                  <pre class="tab__codigo"><code data-language="html"> 
-&lt;div class="c100-s form__select">
+                  <pre class="tab__codigo">&lt;div class="c100-s form__select">
   &lt;label for="seleccion" class="form__label">Elija figura&lt;/label>
   &lt;select name="figuras" id="seleccion">
     &lt;option> &lt;/option>
@@ -187,7 +182,7 @@ form(action="").form</code></pre>
     &lt;option value="cuadrado">cuadrado&lt;/option>
     &lt;option value="triangulo">triangulo&lt;/option>
   &lt;/select>
-&lt;/div></code></pre>
+&lt;/div></pre>
                 </div>
               </div>
             </div>
@@ -226,7 +221,7 @@ form(action="").form</code></pre>
               </div>
               <div class="c100-s tab__conte">
                 <div id="radio1">
-                  <pre class="tab__codigo"><code data-language="html">.c100-s
+                  <pre class="tab__codigo">.c100-s
   div
     input(type="radio", name="color", value="rojo")#rojo
     label(for="rojo") rojo
@@ -241,10 +236,10 @@ form(action="").form</code></pre>
     input(type="checkbox", name="transporte", value="skate")#skate
     label(for="skate") skate
     input(type="checkbox", name="transporte", value="patines")#patines
-    label(for="patines") patines </code></pre>
+    label(for="patines") patines </pre>
                 </div>
                 <div id="radio2">
-                  <pre class="tab__codigo"><code data-language="html">&lt;div class="c100-s">
+                  <pre class="tab__codigo">&lt;div class="c100-s">
   &lt;div>
     &lt;input type="radio" name="color" value="rojo" id="rojo">
     &lt;label for="rojo">rojo&lt;/label>
@@ -263,7 +258,7 @@ form(action="").form</code></pre>
     &lt;input type="checkbox" name="transporte" value="patines" id="patines">
     &lt;label for="patines">patines &lt;/label>
   &lt;/div>
-&lt;/div></code></pre>
+&lt;/div></pre>
                 </div>
               </div>
             </div>
@@ -287,23 +282,28 @@ form(action="").form</code></pre>
               </div>
               <div class="c100-s tab__conte">
                 <div id="file1">
-                  <pre class="tab__codigo"><code data-language="html">.c100-s
+                  <pre class="tab__codigo">.c100-s
   div.form__file
     input(type="file",multiple="multiple")
     span.btn FILE
-    input(type="text", placeholder="Seleccione archivos").file_input</code></pre>
+    input(type="text", placeholder="Seleccione archivos").file_input</pre>
                 </div>
                 <div id="file2">
-                  <pre class="tab__codigo"><code data-language="html">&lt;div class="c100-s">
+                  <pre class="tab__codigo">&lt;div class="c100-s">
   &lt;div class="form__file">
     &lt;input type="file" multiple="multiple">&lt;span class="btn">FILE&lt;/span>
     &lt;input type="text" placeholder="Seleccione archivos" class="file_input">
   &lt;/div>
-&lt;/div></code></pre>
+&lt;/div></pre>
                 </div>
               </div>
             </div>
           </div>
+          <form action="php/form.php" class="form">
+            <input type="text">
+            <input type="text">
+            <button class="btn">Enviar </button>
+          </form>
         </div>
       </section>
     </section>

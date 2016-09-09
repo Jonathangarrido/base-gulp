@@ -52,7 +52,7 @@ $breakpoints: (
   l: 768px, 
   xl: 1200px
 );
-$cols: 20 25 33 50 100;
+$cols: 25 33 50 100;
 
 
 /* 2. Directorios
@@ -248,10 +248,11 @@ $card--title--size     : 1.5rem;
 /* 14. Modal
    ========================================================================== */
 
-$modal--bg              : $opacity-1;
-$modal__conte--bg       : #f4f4f4;
-$modal__conte--padding  : 2rem 3rem;
-$modal__conte--width    : 40rem; 
+$modal--bg                  : $opacity-1;
+$modal__conte--bg           : #f4f4f4;
+$modal__conte--padding      : 1rem;
+$modal__conte--padding-desk : 2rem 3rem;
+$modal__conte--width        : 40rem; 
 
 
 /* 15. Tabs

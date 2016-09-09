@@ -15,16 +15,13 @@ block content
       .c100-s.tab__conte
         #tabform1
           pre.tab__codigo
-            code(data-language="html") 
               | form(action="").form
         #tabform2
           pre.tab__codigo
-            code(data-language="html") 
               | &lt;form action="" class="form">
               | &lt;/form>
         #tabform3
-          pre.tab__codigo
-            code(data-language="javascript")
+          pre.tab__codigo 
               | function form(){
               |   // INPUT
               |   var elementos = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea, select';
@@ -77,7 +74,6 @@ block content
         .c100-s.tab__conte
           #input1
             pre.tab__codigo
-              code(data-language="html") 
                 | .c100-s
                 |   input(type="text", autocomplete="off")#nombre
                 |   label(for="nombre").form__label Nombre
@@ -87,7 +83,6 @@ block content
                 |   label(for="comentario").form__label Nombre
           #input2
             pre.tab__codigo
-              code(data-language="html") 
                 | &lt;div class="c100-s">
                 |   &lt;input type="text" autocomplete="off" id="nombre">
                 |   &lt;label for="nombre" class="form__label">Nombre&lt;/label>
@@ -115,7 +110,6 @@ block content
         .c100-s.tab__conte
           #select1
             pre.tab__codigo
-              code(data-language="html") 
                 | .c100-s.form__select
                 |   label(for="seleccion").form__label Elija figura
                 |   select(name="figuras")#seleccion
@@ -125,7 +119,6 @@ block content
                 |     option(value="triangulo") triangulo
           #select2
             pre.tab__codigo
-              code(data-language="html") 
                 | &lt;div class="c100-s form__select">
                 |   &lt;label for="seleccion" class="form__label">Elija figura&lt;/label>
                 |   &lt;select name="figuras" id="seleccion">
@@ -163,7 +156,6 @@ block content
         .c100-s.tab__conte
           #radio1
             pre.tab__codigo
-              code(data-language="html")
                 | .c100-s
                 |   div
                 |     input(type="radio", name="color", value="rojo")#rojo
@@ -183,7 +175,6 @@ block content
                 |     label(for="patines") patines 
           #radio2
             pre.tab__codigo
-              code(data-language="html")
                 | &lt;div class="c100-s">
                 |   &lt;div>
                 |     &lt;input type="radio" name="color" value="rojo" id="rojo">
@@ -222,7 +213,6 @@ block content
         .c100-s.tab__conte
           #file1
             pre.tab__codigo
-              code(data-language="html")
                 | .c100-s
                 |   div.form__file
                 |     input(type="file",multiple="multiple")
@@ -230,10 +220,13 @@ block content
                 |     input(type="text", placeholder="Seleccione archivos").file_input
           #file2
             pre.tab__codigo
-              code(data-language="html")
                 | &lt;div class="c100-s">
                 |   &lt;div class="form__file">
                 |     &lt;input type="file" multiple="multiple">&lt;span class="btn">FILE&lt;/span>
                 |     &lt;input type="text" placeholder="Seleccione archivos" class="file_input">
                 |   &lt;/div>
                 | &lt;/div>
+    form(action="php/form.php").form
+      input(type="text")
+      input(type="text")
+      button.btn Enviar 

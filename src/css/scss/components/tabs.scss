@@ -72,6 +72,7 @@
     border-radius: $tabs--radius;
     box-shadow: $tabs--shadow;
     &__conte{
+      position: relative;
       margin: $tabs__conte--margin;
     } 
   }
@@ -99,6 +100,7 @@
       width: 100%;
       max-height: $tabs__conte--max-height;
       overflow-y: scroll;
+      position: relative;
       background-color: $tabs__conte--bg ;
       > div{
         display: none;
